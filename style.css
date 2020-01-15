@@ -4,15 +4,14 @@
   box-sizing: border-box;
 }
 
-:root{
-  --ff-primary: 'Source Sans Pro', sans-serif;
-  --ff-secondary: 'Playfair Display', serif;
+:root {
+  --ff-primary: "Source Sans Pro", sans-serif;
+  --ff-secondary: "Playfair Display", serif;
 
   --clr-white: #ffffff;
   --clr-light: #bbbbbb;
   --clr-dark: #313131;
   --clr-black: #111111;
-
 
   --fw-reg: 300;
   --fw-bold: 900;
@@ -22,17 +21,15 @@
   --fs-h3: 1.25rem;
   --fs-body: 1rem;
 
-
-  --bs: 0.25em 0.25em 0.75em rgba(0,0,0,.25);
+  --bs: 0.25em 0.25em 0.75em rgba(0, 0, 0, 0.25);
 }
-
 
 @media (min-width: 800px) {
   :root {
-      --fs-h1: 4.5rem;
-      --fs-h2: 3.75rem;
-      --fs-h3: 1.5rem;
-      --fs-body: 1.125rem;
+    --fs-h1: 4.5rem;
+    --fs-h2: 3.75rem;
+    --fs-h3: 1.5rem;
+    --fs-body: 1.125rem;
   }
 }
 /* general styles */
@@ -45,7 +42,6 @@ body {
   margin: 0;
   position: relative;
 
-
   display: grid;
   grid-template-rows: auto;
   grid-template-columns: auto;
@@ -57,7 +53,9 @@ img {
   max-width: 100%;
 }
 
-strong { font-weight: var(--fw-bold) }
+strong {
+  font-weight: var(--fw-bold);
+}
 
 h1,
 h2,
@@ -69,9 +67,15 @@ h3 {
   margin: 0;
 }
 
-h1 { font-size: var(--fs-h1) }
-h2 { font-size: var(--fs-h2) }
-h3 { font-size: var(--fs-h3) }
+h1 {
+  font-size: var(--fs-h1);
+}
+h2 {
+  font-size: var(--fs-h2);
+}
+h3 {
+  font-size: var(--fs-h3);
+}
 
 a {
   color: var(--clr-white);
@@ -85,14 +89,12 @@ p {
   line-height: 1.8em;
 }
 
-
-
 input,
 textarea {
   margin-bottom: 1rem;
   display: flex;
   flex-direction: column;
-  background-color: rgba(0,0,0,0);
+  background-color: rgba(0, 0, 0, 0);
   border: 0;
   border-bottom: solid 1px var(--clr-light);
   width: 100%;
@@ -108,7 +110,8 @@ textarea {
   font-size: 1rem;
 }
 
-input:focus, textarea:focus {
+input:focus,
+textarea:focus {
   border-bottom: solid 1px var(--clr-dark);
 }
 
@@ -118,7 +121,7 @@ input:focus, textarea:focus {
   font-family: var(--ff-primary);
   font-weight: 900;
   letter-spacing: 2px;
-  font-size: .8rem;
+  font-size: 0.8rem;
   border: 0;
   cursor: pointer;
   outline: none;
@@ -143,9 +146,8 @@ input:focus, textarea:focus {
   color: var(--clr-white);
 }
 
-
 .btn.primary:hover,
-.btn.secondary:hover { 
+.btn.secondary:hover {
   transform: scale(1.1);
 }
 
@@ -154,7 +156,7 @@ section {
 }
 
 .section__title {
-  margin-bottom: .25em;
+  margin-bottom: 0.25em;
 }
 
 .bg-dark {
@@ -162,16 +164,12 @@ section {
 }
 
 @media (min-width: 600px) {
-  section{
-  }
-
   .section__content {
     grid-area: content;
-    max-width: 1300px;
+    max-width: 970px;
     display: block;
     margin: 0 auto;
   }
-
 }
 
 main {
@@ -179,6 +177,13 @@ main {
 }
 footer {
   grid-area: footer;
+}
+
+blockquote {
+  margin: 1.5em 0;
+  padding-left: 20px;
+  border-left: solid 2px white;
+  font-style: italic;
 }
 
 /* Header */
@@ -205,7 +210,7 @@ header {
   text-transform: uppercase;
   font-weight: 900;
   letter-spacing: 1px;
-  padding: .1em 0;
+  padding: 0.1em 0;
   border-bottom: solid 2px var(--clr-white);
 }
 
@@ -223,7 +228,7 @@ nav {
 }
 
 nav a {
-  margin: .4rem 0;
+  margin: 0.4rem 0;
   text-transform: uppercase;
   text-decoration: none;
 }
@@ -236,12 +241,16 @@ nav a {
 }
 
 @media (min-width: 800px) {
+  section {
+    padding: 5em 5em;
+  }
+
   header {
     padding: 2em 0;
     display: grid;
     grid:
       ". name nav ." auto /
-      minmax(5vw, 1fr) minmax(210px, 300px) minmax(auto,1000px) minmax(5vw, 1fr);
+      minmax(5vw, 1fr) 210px minmax(auto, 760px) minmax(5vw, 1fr);
   }
 
   .name {
@@ -276,8 +285,9 @@ nav a {
 
 .intro {
   position: relative;
+  padding-top: 20vh;
   overflow: hidden;
-  background: linear-gradient(45deg, rgba(0,0,0,.3), var(--clr-black));
+  background: linear-gradient(45deg, rgba(0, 0, 0, 0.3), var(--clr-black));
 }
 
 .section__title--intro {
@@ -312,47 +322,127 @@ nav a {
 
 .tag {
   border: solid 1px var(--clr-light);
-  margin: .2em;
-  padding: .1em .4em;
+  margin: 0.2em;
+  padding: 0.1em 0.4em;
 }
 
 .tag:hover {
   border: solid 1px var(--clr-light);
-  margin: .2em;
-  padding: .1em .4em;
+  margin: 0.2em;
+  padding: 0.1em 0.4em;
 }
 
 @media (min-width: 600px) {
-
-  .background {
-    position: absolute;
-    z-index: -1;
-    top: 50%;
-    left: 50%;
-    transform: translateX(-50%) translateY(-50%);
+  .intro .background {
     min-width: 100%;
     max-height: none;
   }
 }
 
-.contact {
-  background: var(--clr-white);
-}
-.contact h2 {
-  margin: 0;
-}
-.contact {
-  margin: 0;
-  font-size: .8em;
-  color: var(--clr-dark);
+/* Portfolio */
+
+.portfolio {
+  background-color: var(--clr-white);
 }
 
-.contact h2 {
-  color: var(--clr-dark);
+.portfolio h2 {
+  color: var(--clr-black);
+  margin-bottom: 1em;
 }
 
+.portfolio .skills {
+  margin: 0;
+}
+
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+
+.card {
+  box-shadow: 0 .25rem .25rem rgba(0,0,0,0.2);
+  min-width: 300px;
+  margin: 1em;
+  height: 450px;
+  overflow: hidden;
+  position: relative;
+  transition: transform 250ms ease-in-out,
+    box-shadow 250ms ease-in-out;
+}
+
+.card .background {
+  z-index: 0;
+}
+
+.card .description {
+  display: block;
+}
+
+.card-title {
+  margin-bottom: 1em;
+}
+
+.card .top-bar {
+  display: flex;
+  justify-content: space-between;
+}
+
+.card-body {
+  padding: 2rem;
+  position: absolute;
+  top: 19rem;
+  background: var(--clr-dark);
+  transition: top 250ms ease-in-out;
+  height: 450px;
+}
+
+.card-body p {
+  opacity: 0;
+  transition: opacity 250ms ease-in-out;
+}
+.card .skills {
+  margin-bottom: 1em;
+}
+
+.card .links {
+  font-size: 1.5em;
+}
+
+.card:hover {
+  transform: scale(1.01);
+  box-shadow: 3px 3px 1rem rgba(0, 0, 0, 0.83);
+}
+.card:hover .card-body {
+  top: 0rem;
+}
+
+.card:hover .card-body p {
+  opacity: 1;
+}
+
+/* Contact */
+
+.contact {
+  background: var(--clr-black);
+  color:  var(--clr-light);
+  margin: 0;
+  font-size: 1em;
+  text-align: center;
+}
+.contact h2 {
+  color:  var(--clr-white);
+}
+
+.contact .card {
+  background-color: var(--clr-white);
+  padding: 3em;
+  height: auto;
+  margin: 0 auto;
+  max-width: 500px;
+}
 .contact form {
-  margin-top: 2rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
