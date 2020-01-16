@@ -11,7 +11,9 @@ const darkenHeaderOnScroll = new IntersectionObserver(function(
   darkenHeaderOnScroll
 ) {
   entries.forEach(entry => {
-    if (!entry.isIntersecting) {
+    console.log(entry.isIntersecting);
+    console.log(entry.intersectionRatio);
+    if (entry.intersectionRatio < 0.9) {
       document.querySelector("header").classList.add("bg-dark");
     } else {
       document.querySelector("header").classList.remove("bg-dark");
@@ -25,8 +27,4 @@ darkenHeaderOnScroll.observe(intro);
 burger.addEventListener("click", function() {
   const nav = document.querySelector("nav");
   nav.style.display = nav.style.display === 'none' ? 'flex' : 'none';
-
-  /* body.addEventListener("click", () => {
-    document.querySelector("nav").style.display = "flex";
-  }) */
 })
