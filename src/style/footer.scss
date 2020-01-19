@@ -1,0 +1,30 @@
+/* Footer */
+
+footer {
+  padding: 4rem;
+  text-align: center;
+  background: $clr-white;
+  color: $clr-black;
+}
+
+footer a {
+  color: $clr-black;
+}
+
+footer ul {
+  display: flex;
+  justify-content: center;
+  padding: 0;
+}
+footer li {
+  list-style: none;
+  margin: 1rem 1rem;
+  font-size: 2rem;
+}
+
+footer span {
+  text-transform: uppercase;
+  font-weight: 900;
+  color: $clr-dark;
+  font-family: $ff-secondary;
+}
