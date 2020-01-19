@@ -6,22 +6,24 @@
   margin: 0;
   font-size: 1em;
   text-align: center;
-}
-.contact h2 {
-  color: $clr-white;
-}
+  h2 {
+    color: $clr-white;
+  }
 
-.contact .card {
-  background-color: $clr-white;
-  padding: 3em;
-  height: auto;
-  margin: 0 auto;
-  max-width: 500px;
-}
-.contact form {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
+  .section__content {
+    max-width: 500px;
+  }
 
+  .card {
+    background-color: $clr-white;
+    padding: 3em;
+    height: auto;
+    margin: 0 auto;
+  }
+  form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+}
