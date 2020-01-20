@@ -4,7 +4,7 @@ export class HeaderService{
     this.intro = document.querySelector(".intro");
 
     this.headerObserverOptions = {
-      threshold: .9
+      threshold: .95
     };
 
     this.darkenHeaderOnScroll = this.declareObserver();
@@ -15,7 +15,7 @@ export class HeaderService{
       entries
     ) {
       entries.forEach(entry => {
-        if (entry.intersectionRatio < 0.9) {
+        if (entry.intersectionRatio < 0.95) {
           document.querySelector("header").classList.add("bg-dark");
         } else {
           document.querySelector("header").classList.remove("bg-dark");

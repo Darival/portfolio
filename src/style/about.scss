@@ -1,0 +1,39 @@
+.about {
+  .picture {
+    max-width: 400px;
+    height: 400px;
+    display: block;
+    margin: 0 auto 3em;
+    background-image: linear-gradient(
+        to bottom,
+        rgba(117, 19, 93, 0.4),
+        rgba($clr-white, .1)
+      ),
+      url("../assets/cesar_picture.jpg");
+    background-size: cover;
+    background-position: center;
+  }
+}
+
+@media (min-width: 800px) {
+  .about {
+    .section__content {
+      display: grid;
+      grid: "picture description" auto / 1fr 2fr;
+      grid-gap: 40px;
+    }
+
+    .description {
+      grid-area: description;
+      display: flex;
+      flex-flow: column;
+      justify-content: center;
+    }
+
+    .picture {
+      grid-area: picture;
+      width: 100%;
+      height: 400px;
+    }
+  }
+}

@@ -61,7 +61,7 @@ nav {
     display: grid;
     grid:
       ". name nav ." auto /
-      minmax(5vw, 1fr) 210px minmax(auto, 760px) minmax(5vw, 1fr);
+      minmax(5vw, 1fr) minmax(210px, 1fr) minmax(auto, 760px) minmax(5vw, 1fr);
   }
 
   .name {
@@ -86,7 +86,7 @@ nav {
     top: 0;
     left: 0;
     a {
-      margin-right: 3em;
+      margin-left: 3em;
     }
   }
 }

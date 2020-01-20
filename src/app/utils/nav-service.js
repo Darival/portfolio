@@ -7,7 +7,7 @@ export class NavService {
 
   startNavEventListener(){
     this.burger.addEventListener("click", () => {
-      this.nav.style.display = nav.style.display === 'none' ? 'flex' : 'none';
+      this.nav.style.display = this.nav.style.display === 'none' ? 'flex' : 'none';
     });
   }
 }

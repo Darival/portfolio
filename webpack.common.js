@@ -1,20 +1,10 @@
-var HtmlWebpackPlugin = require('html-webpack-plugin');
-
 module.exports = {
-  entry: "./src/index.js",
+  entry: {
+    main: "./src/index.js",
+    vendor: "./src/vendor.js"
+  },
   module: {
     rules: [
-      {
-        test: /\.s[ac]ss$/i,
-        use: [
-          // Creates `style` nodes from JS strings
-          "style-loader",
-          // Translates CSS into CommonJS
-          "css-loader",
-          // Compiles Sass to CSS
-          "sass-loader"
-        ]
-      },
       {
         test: /\.html$/i,
         use: ["html-loader"]
@@ -22,17 +12,22 @@ module.exports = {
       {
         test: /\.(svg|png|jpe?g|gif)$/i,
         use: {
-          loader:"file-loader",
+          loader: "file-loader",
           options: {
             name: "[name].[hash].[ext]",
             outputPath: "imgs",
             esModule: false
           }
         }
+      },
+      {
+        test: /\.woff(2)?(\?v=[0-9]\.[0-9]\.[0-9])?$/,
+        loader: "url-loader?limit=10000&mimetype=application/font-woff"
+      },
+      {
+        test: /\.(ttf|eot)(\?v=[0-9]\.[0-9]\.[0-9])?$/,
+        loader: "file-loader"
       }
     ]
-  },
-  plugins: [new HtmlWebpackPlugin({
-    template: "./src/template.html"
-  })]
+  }
 };
