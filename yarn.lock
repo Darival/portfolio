@@ -4079,6 +4079,13 @@ retry@^0.12.0:
   resolved "https://registry.yarnpkg.com/retry/-/retry-0.12.0.tgz#1b42a6266a21f07421d1b0b54b7dc167b01c013b"
   integrity sha1-G0KmJmoh8HQh0bC1S33BZ7AcATs=
 
+rfs@^9.0.2:
+  version "9.0.2"
+  resolved "https://registry.yarnpkg.com/rfs/-/rfs-9.0.2.tgz#3561013d529e4cbeb5839bd7a6b4e2fa48a54a28"
+  integrity sha512-reBlIf8GuC3h6LgpEWMCjGUwo7kNgNNnxhX6yTEHD4NEjg4gsVoWyqJ8rdNYjD2KFWxBqAmfuFIQcuaKNY0Oqg==
+  dependencies:
+    postcss-value-parser "^4.0.2"
+
 rimraf@2, rimraf@^2.5.4, rimraf@^2.6.3:
   version "2.7.1"
   resolved "https://registry.yarnpkg.com/rimraf/-/rimraf-2.7.1.tgz#35797f13a7fdadc566142c29d4f07ccad483e3ec"
