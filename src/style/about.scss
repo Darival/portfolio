@@ -4,14 +4,23 @@
     height: 400px;
     display: block;
     margin: 0 auto 3em;
-    background-image: linear-gradient(
-        to bottom,
-        rgba(117, 19, 93, 0.4),
-        rgba($clr-white, .1)
-      ),
-      url("../assets/cesar_picture.jpg");
+    background-image: url("../assets/cesar_picture.jpg");
     background-size: cover;
     background-position: center;
+    transition: box-shadow 200ms ease-in;
+    box-shadow: $box-shadow;
+  }
+
+  p, blockquote {
+    color: $clr-white;
+  }
+
+  .picture:hover {
+    box-shadow: $box-shadow-hover;
+  }
+
+  p, blockquote {
+    color: $clr-white;
   }
 }
 

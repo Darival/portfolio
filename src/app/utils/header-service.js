@@ -16,9 +16,9 @@ export class HeaderService{
     ) {
       entries.forEach(entry => {
         if (entry.intersectionRatio < 0.95) {
-          document.querySelector("header").classList.add("bg-dark");
+          document.querySelector("header").classList.add("bg-light");
         } else {
-          document.querySelector("header").classList.remove("bg-dark");
+          document.querySelector("header").classList.remove("bg-light");
         }
       });
     },this.headerObserverOptions);

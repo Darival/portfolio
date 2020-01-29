@@ -3,3 +3,63 @@
   color: $clr-white;
   margin-bottom: 1em;
 }
+
+.gallery {
+  .project {
+    margin: 0 auto;
+    width: 100%;
+    max-width: 500px;
+    position: relative;
+    color: $clr-white;
+    display: grid;
+    grid: "card" auto / auto;
+
+    filter: grayscale(100%) contrast(1) brightness(120%);
+    img {
+      grid-area: card;
+    }
+    .project-content {
+      background: rgba($clr-dark, 0.9);
+      padding: 2rem;
+      margin: 0;
+      grid-area: card;
+      .skills {
+        display: flex;
+        .tag {
+          border-color: $clr-white;
+        }
+      }
+      .project-links {
+        list-style: none;
+        display: flex;
+        font-size: 1.6em;
+        justify-content: left;
+        padding: 0;
+        margin: 1em 0 0;
+        li {
+          margin-right: 0.8em;
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 800px) {
+  .gallery {
+    .project {
+      margin: 0;
+      grid-template-rows: auto;
+      grid-template-columns: 300px 50px 600px;
+      img {
+        grid-column: 2 / -1;
+        grid-row: 1 / -1;
+        place-self: center;
+      }
+      .project-content {
+        grid-column: 1 / 3;
+        grid-row: 1 / -1;
+        place-self: center;
+      }
+    }
+  }
+}

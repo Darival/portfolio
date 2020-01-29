@@ -10,30 +10,23 @@
     <header>
       <div class="nav-bar">
         <div class="name">
-          <a href="#!">César Contreras</a>
+          <a href="#">César Contreras</a>
         </div>
 
-        <a class="burger" href="#!">
-          <div></div>
-          <div></div>
-          <div></div>
-        </a>
+        <button class="nav-toggle" aria-label="toggle navigation">
+          <span class="hamburger"></span>
+        </button>
 
         <nav>
           <a href="#!">Resume</a>
-          <a href="#!">Portfolio</a>
-          <a href="#!">Blog</a>
-          <a href="#!">Contact</a>
+          <a href="#about">About</a>
+          <a href="#portfolio">Portfolio</a>
+          <a href="#contact">Contact</a>
         </nav>
       </div>
     </header>
     <main>
       <section class="intro">
-        <img
-          class="background"
-          src="./assets/photo-1480506132288-68f7705954bd.jpeg"
-          alt=""
-        />
         <div class="section__content section__content--intro">
           <div class="intro--heading">
             <h1 class="section__title--intro">
@@ -60,12 +53,14 @@
               <div class="tag">Amazon-web-services</div>
               <div class="tag">Sass</div>
               <div class="tag">Linux</div>
+              <div class="tag">Laravel</div>
               <div class="tag">Shell</div>
               <div class="tag">Html</div>
+              <div class="tag">PHP</div>
+              <div class="tag">Python</div>
               <div class="tag">AMP</div>
               <div class="tag">Javascript</div>
               <div class="tag">Css</div>
-              <div class="tag">Visual-studio-code</div>
               <div class="tag">Nginx</div>
               <div class="tag">Apache</div>
               <div class="tag">Netlify</div>
@@ -77,12 +72,39 @@
               <div class="tag">Security</div>
               <div class="tag">Figma</div>
             </div>
+            <ul class="social-list">
+              <li class="social-list__item">
+                <a class="social-list__link" href="https://dev.to"
+                  ><i class="fab fa-dev"></i
+                ></a>
+              </li>
+              <li class="social-list__item">
+                <a class="social-list__link" href="https://codepen.io"
+                  ><i class="fab fa-codepen"></i
+                ></a>
+              </li>
+              <li class="social-list__item">
+                <a class="social-list__link" href="http://linkedin.com"
+                  ><i class="fab fa-linkedin"></i
+                ></a>
+              </li>
+              <li class="social-list__item">
+                <a class="social-list__link" href="https://twitter.com"
+                  ><i class="fab fa-twitter"></i
+                ></a>
+              </li>
+              <li class="social-list__item">
+                <a class="social-list__link" href="https://github.com"
+                  ><i class="fab fa-github"></i
+                ></a>
+              </li>
+            </ul>
           </div>
         </div>
 
         <img class="arrow" src="./assets/arrow-black.svg" alt="" srcset="" />
       </section>
-      <section class="about">
+      <section id="about" class="about">
         <div class="section__content">
           <div class="picture"></div>
           <div class="description">
@@ -103,18 +125,48 @@
           </div>
         </div>
       </section>
-      <section class="portfolio">
+      <section id="portfolio" class="portfolio">
         <div class="section__content">
-          <h2 class="section__title--about">Projects.</h2>
+          <h2 class="section__title--about">Portfolio.</h2>
+          <div class="gallery">
+            <div class="project">
+              <img src="./assets/dralbertosiller.png" alt="" srcset="">
+              <div class="project-content">
+                <h3 class="title">Dr. Alberto Siller</h3>
+                <p class="description">
+                  Lorem, ipsum dolor sit amet consectetur adipisicing elit. Vel
+                  consequuntur repellat excepturi ut quos expedita explicabo
+                  aliquam esse adipisci! Officia odio, quod nam ratione
+                  molestias ex placeat. Qui, quae maxime.
+                </p>
+                <div class="skills">
+                  <div class="tag">Vue.js</div>
+                  <div class="tag">Webpack</div>
+                </div>
+                <ul class="project-links">
+                  <li>
+                    <a href="https://github.com"
+                      ><i class="fab fa-github"></i
+                    ></a>
+                  </li>
+                  <li>
+                    <a href="http://link.com"
+                      ><i class="fas fa-external-link-alt"></i></i
+                    ></a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
-      <section class="contact">
+      <section id="contact" class="contact">
         <div class="section__content">
           <h2 class="section__title--contact">Get in touch</h2>
           <p>
             If you wanna get in touch, talk to me about a project collaboration
             or just say hi, fill up the form below or send an email to
-            <a href="mailto:hi@cesar.me">hi@cesar.me</a> and ~let's talk.
+            <a href="mailto:hi@cesar.me">hi@cerco.dev</a> and ~let's talk.
           </p>
           <div class="card">
             <form action="">
@@ -167,7 +219,7 @@
           ></a>
         </li>
       </ul>
-      <a class="email" href="mailto:hi@cesar.dev">hi@cesar.dev</a>
+      <a class="email" href="mailto:hi@cerco.dev">hi@cerco.dev</a>
       <span>César Contreras</span>
     </footer>
   </body>

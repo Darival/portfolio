@@ -1,17 +1,23 @@
+@import "~rfs/scss";
 @import url('https://fonts.googleapis.com/css?family=Playfair+Display:400,900|Source+Sans+Pro&display=swap');
 
 $ff-primary: "Source Sans Pro", sans-serif;
 $ff-secondary: "Playfair Display", serif;
 
 $clr-white: #ffffff;
-$clr-light: #bbbbbb;
-$clr-dark: #313131;
+$clr-light: #3a606e;
+$clr-dark: #151922;
 $clr-black: #111111;
+
+$box-shadow: 4px 4px $clr-white;
+$box-shadow-hover: 8px 8px 0 2px $clr-white;
+$transparent: rgba($clr-light, 0.7);
+$gradient: linear-gradient(rgba($clr-light,.5), rgba($clr-white,.9));
 
 $fw-reg: 300;
 $fw-bold: 900;
 
-$fs-h1: 3rem;
+$fs-h1: 2rem;
 $fs-h2: 2.25rem;
 $fs-h3: 1.25rem;
 $fs-body: 1rem;
@@ -24,19 +30,22 @@ $bs: 0.25em 0.25em 0.75em rgba(0, 0, 0, 0.25);
   box-sizing: border-box;
 }
 
-@media (min-width: 800px) {
-  $fs-h1: 4.5rem;
-  $fs-h2: 3.75rem;
-  $fs-h3: 1.5rem;
-  $fs-body: 1.2rem;
+/* general styles */
+
+html {
+  scroll-behavior: smooth;
 }
 
-/* general styles */
+:focus {
+  /* outline: 2px solid $clr-white;
+  outline-offset: 5px; */
+  outline: none;
+}
 
 body {
   font-family: $ff-primary;
   font-size: $fs-body;
-  background-color: $clr-black;
+  background-color: $clr-light;
   color: $clr-light;
   margin: 0;
   position: relative;
@@ -67,7 +76,7 @@ h3 {
 }
 
 h1 {
-  font-size: $fs-h1;
+  @include font-size($fs-h1);
 }
 h2 {
   font-size: $fs-h2;
@@ -128,8 +137,8 @@ textarea:focus {
 }
 
 .btn.primary {
-  background-color: $clr-white;
-  color: $clr-black;
+  border: 2px solid $clr-light;
+  color: $clr-light;
   &::after {
     content: "";
     background: aqua;
@@ -138,25 +147,31 @@ textarea:focus {
   }
 }
 .btn.secondary {
-  background-color: $clr-dark;
+  background-color: $clr-light;
   color: $clr-white;
 }
 
 .btn.primary:hover,
 .btn.secondary:hover {
-  transform: scale(1.1);
+  /* transform: scale(1.1); */
 }
 
 section {
-  padding: 5em 4vw;
+  padding: 5em 4vw 1em;
 }
 
 .section__title {
   margin-bottom: 0.25em;
 }
 
-.bg-dark {
-  background-color: $clr-black;
+.bg-light {
+  background-color: $clr-light !important;
+  a {
+    color: $clr-white !important;
+  }
+  .name a {
+    border-bottom: solid 2px $clr-white;
+  }
 }
 
 @media (min-width: 600px) {
@@ -188,6 +203,12 @@ blockquote {
   left: 0;
   width: 100%;
   height: 75px;
+}
+
+
+
+a:hover {
+  color: $clr-light;
 }
 
 @import "header.scss";
